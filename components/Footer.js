@@ -8,11 +8,13 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-export default Footer = ()=>(
+export default Footer = (props)=>(
 	<View style={styles.footer}>
 
-			<TouchableOpacity style={styles.new1}>
-			<Icon name="file"/> 
+			<TouchableOpacity style={styles.new1}
+				onPress={props.moveToAddNote}
+			>
+			<Icon name="file" size={30}/> 
 			</TouchableOpacity>
 	</View>
 
@@ -21,7 +23,7 @@ export default Footer = ()=>(
 const styles = StyleSheet.create({
 
 	footer: {
-		flex: 0.5,
+		flex: 0.9,
 		borderTopWidth: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
